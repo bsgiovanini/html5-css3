@@ -29,21 +29,24 @@ section {
   margin: 10px;
   position: relative;
   background-color: gray;
-  float: left;
   border: 1px solid black; 
   border-width: thick;
 
 }
 
-section:nth-child(1) > header {
+div:nth-child(1) {
+  background-color: purple;
+}
+
+div:nth-child(2) > section > header {
   background-color: white;
 }
 
-section:nth-child(2) > header {
+div:nth-child(3) > section > header {
   background-color: green;
 }
 
-section:nth-child(3) > header {
+div:nth-child(4) > section > header {
   background-color: yellow;
 }
 
@@ -53,25 +56,26 @@ section > span {
   margin-top: 40px;
 }
 
-.row {
-  width: 100%;
-}
 
 @media (min-width: 992px) {   
   
   .col-lg-4 {
-    width: calc(33.33% - 20px);
+    float: left;
+    width: 33.33%;
   }
 }
 
 /********** Medium devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   
+
   .col-md-6 {
-    width: calc(50% - 20px); 
+    float: left;
+    width: 50%; 
   }
   .col-md-12 {
-    width: calc(100% - 20px);
+    float: left;
+    width: 100%;
   }
 }
 
@@ -79,6 +83,7 @@ section > span {
 @media (max-width: 767px) {
  
   .col-sm-12 {
-    width: calc(100% - 20px);
+    float: left;
+    width: 100%;
   }
 }
